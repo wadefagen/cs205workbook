@@ -1,0 +1,31 @@
+
+{% extends "templates/base.html" %}
+{% block content %}
+
+<div class="container">
+    
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="/static/underscore.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.js"></script>
+    <script src="js/vis.js"></script>
+    <script>
+        main();
+    </script>
+</div>
+
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Demo: Color Freq</h1>
+        </div>
+       </div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-sm-6" id="img"></div>
+		<div class="col-sm-6">
+			<div class="row" id="freq"></div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

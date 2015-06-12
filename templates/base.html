@@ -39,53 +39,33 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Demos<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-          <!--
-            <li><a href="/demo/Welcome">Welcome</a></li>
-          -->
-            <li><a href="/demo_NFL/">NFL</a></li>
-            <li><a href="/demo_randPairs/">Random Pairs</a></li>
-            <li><a href="/demo_truncColor/">Truncated Color</a></li>
-            <li><a href="/demo_colorFreq_start/">Color Frequency (start)</a></li>
-            <li><a href="/demo_colorFreq_endOfLecture/">Color Frequency (end of Tuesday)</a></li>
-            <li><a href="/demo_colorFreq_d3/">Color Frequency (end of Thursday)</a></li>
-            <li><a href="/demo_textColor/">Text Colors</a></li>
-            <li><a href="/demo_textCleaning/">Text Cleaning</a></li>
-            <li><a href="/demo_paragraphs/">Paragraphs</a></li>
-            <li><a href="/demo_pos/">Social Network</a></li>
-            <li><a href="/demo_olympics/">Olympic Data</a></li>
-            <li><a href="/demo_olympics_day2/">Olympic Data (Day 2)</a></li>
-            <li><a href="/demo_countryLyrics/">Country Lyrics Return!</a></li>
-            <li><a href="/demo_cumtd/">CUMTD</a></li>
-            <li><a href="/demo_gmaps+cumtd/">Google Maps (w/ CUMTD Data)</a></li>
-            <li><a href="/demo_roadtrip/">Road Trip</a></li>
+            {% for item in navigation.demos %}
+            <li><a href="{{item.href}}">{{item.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Labs<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-          <!--
-              <li><a href="/lab/ImageSingle">Image Single</a></li>
-          -->
-              <li><a href="/lab_ImageRecolor/">Image Recolor</a></li>
-              <li><a href="/lab_Averages/">Image Averages</a></li>
-			  <li><a href="/lab_d3shapes/">d3 and Color Frequency</a></li>
-			  <li><a href="/lab_cumtd/">CUMTD</a></li>
+            {% for item in navigation.labs %}
+            <li><a href="{{item.href}}">{{item.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MPs<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-          <!--
-            <li><a href="/mp/SimpleAliceInWonderland">Alice</a></li>
-          -->
+            {% for item in navigation.mps %}
+            <li><a href="{{item.href}}">{{item.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Personal<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-          	<!--
-            <li><a href="/pers/StockScraper">Stocks</a></li>
-            -->
+            {% for item in navigation.personal %}
+            <li><a href="{{item.href}}">{{item.title}}</a></li>
+            {% endfor %}
           </ul>
         </li>
       </ul>
