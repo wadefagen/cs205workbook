@@ -48,5 +48,4 @@ def fetchExercise(exerciseName):
 
 # start the server with the 'run()' method
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
-
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT')))
